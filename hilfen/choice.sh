@@ -11,6 +11,7 @@ do
             ;;
         "Option 2")
             echo "you chose choice 2"
+	    echo "more than one command line"
             ;;
         "Option 3")
             echo "you chose choice $REPLY which is $opt"

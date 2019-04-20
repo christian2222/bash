@@ -1,0 +1,6 @@
+$sharename= <<WindowsName of Folder>>
+mount -t vboxsf $sharename /mnt/$sharename
+
+now files are shared in /mnt/$sharename
+
+

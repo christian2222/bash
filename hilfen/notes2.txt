@@ -1,0 +1,6 @@
+apt-get install tree gnuplot tiemu ffmpeg
+
+
+fdupes -r
+
+

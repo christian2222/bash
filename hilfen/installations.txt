@@ -1,0 +1,30 @@
+aptitude update
+apt-get install gvim
+apt-get install firefox
+
+apt-get install -y ...    
+-y =Yes Option, Noninteractive say Yes to every question
+
+apt-get install java-sdk
+eclipse
+latex2html
+texlive-full
+nautilus
+vim-latexsuite
+p7zip
+gnome-mplayer
+gxine
+widelands
+gnuchess
+libreoffice
+supertux
+supertuxkart
+tuxmath
+gimp
+xtexcad extern
+ultracopier
+vlc
+kaffeine  - only Desktop
+usb-modeswitch  - for mobbile Internet
+
+

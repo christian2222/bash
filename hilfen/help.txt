@@ -1,0 +1,97 @@
+1. Open Terminal
+2. apt-get install gnome-panel (if not done yet)
+3. gnome-desktop-item-edit /home/<user>/Desktop/ --create-new
+4. search executable files (commands) in /usr/bin
+
+
+keine sudo operationen parallel zu vlc -> Absturz
+
+
+Magic läuft unter Gnome Classic; andere WM nicht so gut
+
+Drucker läuft unter Linux nicht, aber unter windows
+
+apt-get -y install k4dirstat pstools
+apt-get -y install aptiude gparted vlc gnome
+			kubuntu (kde desktop nicht empfohlen)
+apt-get -y install java8-jdk menulibre nvidia-current
+
+grub customizer
+deb http://ppa.launchpad.net/danielrichter2007/grub-customizer/ubuntu YOUR_UBUNTU_VERSION_HERE main 
+deb-src http://ppa.launchpad.net/danielrichter2007/grub-customizer/ubuntu YOUR_UBUNTU_VERSION_HERE main 
+
+
+oder
+
+grub customizer
+sudo add-apt-repository ppa:danielrichter2007/grub-customizer
+sudo apt-get update
+sudo apt-get install grub-customizer
+
+
+create new launcher
+gnome-desktop-item-edit --create-new ~/Desktop
+
+battle vs chess 
+
+sudo service gdm restart
+
+grafik: Gforce gt 740
+sudo install nvidia-current
+
+
+ln -s [tarProg]  # creates a symbolic link to [tarProg] in current directory
+
+apt-get -y install vim-latexsuite vim-addon-manager
+#aktivieren
+vim-addons install latex-suite # fuer jeden user
+vim-addons status # kontrolle 
+
+df %zeigt freien Spiecherplatz der Festplatte an; -h fuer human readable
+
+gnome-session-properties  # StartUpPrograms
+
+GrafikkartenTreiber aktualisieren !!!
+
+
+monster.de
+https://jobboerse.arbeitsagentur.de
+http://de.indeed.com
+http://www.stepstone.de
+
+
+minicopier # like copy handler inclusive source code; doch nicht so toll...
+
+
+meld or kdiff3 # compare contentsof directories
+
+
+diff -s datei.1 datei.2   # vergleicht 2 dateinen und meldet identische Dateien zurück (-s sort für diese Ausgabe; siehe man)
+
+
+fslint # duplicate finder
+
+fdupes # duplicate finder command line tool
+
+dvdrip # makes isos - sinnlos
+
+
+brasero image write problems:
+
+
+Install the ubuntu-restricted-extras package and then install the libcss:
+
+sudo apt-get install ubuntu-restricted-extras
+sudo /usr/share/doc/libdvdread4/install-css.sh
+
+dd if=/dev/cdrom of=filename.iso # copy a cd/dvd to iso
+
+
+xfburn
+
+
+Hiren's BootCD 15.2
+
+install sane xsane
+
+

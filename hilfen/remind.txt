@@ -1,0 +1,19 @@
+ls &> file.txt # print stdout and stderr in die Datei file.txt
+
+cat text.txt | uniq # löscht "doppelte oder mehrfache Zeilen"
+
+du -h <filename> | cut -f1 # size of the file filename
+
+df -h	# used space on directories 
+
+stat --printf="%s\n" file.any # best way to determine file size; \n for new line
+
+
+fdupes -r
+
+
+sudo usermod  -d new_home_dir  -m  username # change your homeDirectory with subfolders to new_home_dir
+
+All Settings->Appearance->check Enable workspaces
+
+Alt+Super+S " turn screen on or off

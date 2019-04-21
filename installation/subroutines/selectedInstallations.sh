@@ -173,5 +173,6 @@ apt-get install -y dvbcut # cutting mpegs
 apt-get install -y vim-latexsuite
 apt-get install -y latex2html
 apt-get install -y texlive-base # installed by default
+apt-get install -y texlive-latex-base # install latex base by default
 
 

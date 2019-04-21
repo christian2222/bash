@@ -99,7 +99,53 @@ apt-get install -y smplayer # see re[psitories
 # apt-get install -y gnome-mplayer
 apt-get install -y dvbcut # cutting mpegs
 
+# software/properties-gtk -> check all checkboxes
+# hardware
+# apt-get install nvidia-current
 
+# PREPARATION
+echo "adding repositories..."
+
+# Add repositories
+# cinerella
+git clone git://git.cinelerra.org/j6t/cinelerra.git my_cinelerra
+# grub customizer
+add-apt-repository ppa:danielrichter2007/grub-customizer
+# nvidia-current
+add-apt-repository ppa:ubuntu-x-swat/x-updates
+
+# ensure you are up to date ;)
+apt-get update; apt-get -y upgrade; apt-get update
+
+echo "installing hardware..."
+# HARDWARE
+# grafik: Gforce gt 740
+apt-get install -y nvidia-current
+# Restart after installation !!!
+
+# program for search and installation
+apt-get install -y aptitude
+
+# boot manager
+apt-get install -y grub-customizer
+
+apt-get install -y usb-modeswitch # for mobile internet
+# more info tomobile Internet: http://ubuntuforums.org/showpost.php?p=7219684&postcount=41
+
+# scanner
+apt-get install -y sane
+apt-get install -y xsane
+
+
+# dvd brenner
+apt-get install -y xfburn
+apt-get install -y brasero
+
+# booting
+apt-get install -y gparted
+
+echo "everythings good, but restart!"
+#  command: reboot
 
 # Other
 # menu editor
@@ -110,6 +156,7 @@ apt-get install -y libcss
 # dazu
 apt-get -y install compizconfig-settings-manager # viele Konfigurationsmoeglichkeiten
 apt-get -y install synaptic # bessere Packetverwaltung als Ubuntu Software Center
+apt-get install brasero
 apt-get -y install unity-tweak-tool # mehr konfigurieren
 apt-get -y install gparted # partition tool
 
@@ -123,7 +170,9 @@ apt-get install -y dvbcut # cutting mpegs
 # apt-get -y install 
 # apt-get -y install 
 
-
+#editors
+# apt-get install openshot
+# apt-get install pitivi
 # aptitude update before!
 
 # first update sources by writing into /etc/apt/sources.list 

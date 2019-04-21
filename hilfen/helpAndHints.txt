@@ -202,3 +202,174 @@ lsblk # lists all sdX gevieechs
 
 # bei Installation von Linux, alles auf eine Partition, sonst gibt es Bootproblemme wegen UEFI!
 
+
+minicopier # like copy handler inclusive source code; doch nicht so toll...
+
+
+meld or kdiff3 # compare contentsof directories
+
+
+
+
+fslint # duplicate finder
+
+fdupes # duplicate finder command line tool
+
+dvdrip # makes isos - sinnlos
+
+
+brasero image write problems:
+
+
+Install the ubuntu-restricted-extras package and then install the libcss:
+
+sudo apt-get install ubuntu-restricted-extras
+sudo /usr/share/doc/libdvdread4/install-css.sh
+
+dd if=/dev/cdrom of=filename.iso # copy a cd/dvd to iso
+
+
+xfburn
+
+
+
+install sane xsane
+
+
+apt-get -y install k4dirstat pstools
+apt-get -y install aptiude gparted vlc gnome
+			kubuntu (kde desktop nicht empfohlen)
+apt-get -y install java8-jdk menulibre nvidia-current
+
+grub customizer
+deb http://ppa.launchpad.net/danielrichter2007/grub-customizer/ubuntu YOUR_UBUNTU_VERSION_HERE main 
+deb-src http://ppa.launchpad.net/danielrichter2007/grub-customizer/ubuntu YOUR_UBUNTU_VERSION_HERE main 
+
+
+oder
+
+grub customizer
+sudo add-apt-repository ppa:danielrichter2007/grub-customizer
+sudo apt-get update
+sudo apt-get install grub-customizer
+
+
+grafik: Gforce gt 740
+sudo install nvidia-current
+
+
+
+apt-get -y install vim-latexsuite vim-addon-manager
+#aktivieren
+vim-addons install latex-suite # fuer jeden user
+vim-addons status # kontrolle 
+
+df # zeigt freien Spiecherplatz der Festplatte an; -h fuer human readable
+
+# GrafikkartenTreiber aktualisieren !!!
+
+
+
+# howto guest addition
+$sharename= <<WindowsName of Folder>>
+mount -t vboxsf $sharename /mnt/$sharename
+
+now files are shared in /mnt/$sharename
+
+# vim
+:help keycodes
+
+
+grub customizer
+boabab
+apt-get install tree gnuplot tiemu ffmpeg
+
+
+fdupes -r
+
+aptitude search 
+gets too big, use grep as pipe
+
+aptitude search | grep -E "<pattern>"
+
+so you also can search inside the descriptions of the programs
+
+
+
+
+programs to install
+
+
+Cinerella
+git clone git://git.cinelerra.org/j6t/cinelerra.git my_cinelerra
+
+
+
+ls &> file.txt # print stdout and stderr in die Datei file.txt
+
+cat text.txt | uniq # löscht "doppelte oder mehrfache Zeilen"
+
+du -h <filename> | cut -f1 # size of the file filename
+
+df -h	# used space on directories 
+
+stat --printf="%s\n" file.any # best way to determine file size; \n for new line
+
+
+fdupes -r
+
+
+sudo usermod  -d new_home_dir  -m  username # change your homeDirectory with subfolders to new_home_dir
+
+All Settings->Appearance->check Enable workspaces
+
+Alt+Super+S " turn screen on or off
+
+
+# aptitude update before!
+
+# first update sources by writing into /etc/apt/sources.list 
+
+# deb http://ftp.de.debian.org/debian/ wheezy main contrib non-free
+# deb http://security.debian.org/ wheezy/updates main contrib
+# deb http://ftp.de.debian.org/debian/ wheezy-updates main contrib non-free
+# deb http://ftp.de.debian.org/debian/ wheezy-backports main contrib non-free
+
+# you can erase the "non-free" if you want
+
+# after all call aptitude update to get access to the "new" software
+
+# apt-get install -y ...    
+# -y =Yes Option, Noninteractive say Yes to every question
+
+
+# after adding git or repositories
+# apt-get update
+# now you can install!
+# apt-get update # see next command
+
+# apt-get -y install libreoffice # preinstalled
+# apt-get -y install kubuntu # not good manager on ubuntu -> prefere unity
+# printer driver not yet...
+
+# apt-get -y install minicopier # nicht so gut...
+# like copy handler inclusive source code; doch nicht so toll...
+# apt-get -y install dvdrip # makes isos - sinnlos
+
+
+# if aptitude search gets too big, use grep as pipe
+# aptitude search | grep -E "<pattern>"
+# so you also can search inside the descriptions of the programs
+
+
+# apt-get install -y ...    
+# -y =Yes Option, Noninteractive say Yes to every question
+
+
+
+# http://ubuntuforums.org/showpost.php?p=7219684&postcount=41
+
+# -d 
+# download only, doesn't install
+
+

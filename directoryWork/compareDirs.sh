@@ -60,7 +60,7 @@ rekuTwo() {
 				echo "lösche $fileTwo"
 				rm $fileTwo
 				echo "erzeuge Link von $fileTwo.softlink auf $fileOne"
-				ln -s "$fileOne" "$fileTwo.softlink"
+				ln -sr "$fileOne" "$fileTwo.softlink"
 				#echo $firstDir $secondDir
 			fi
 		fi

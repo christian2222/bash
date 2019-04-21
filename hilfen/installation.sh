@@ -28,9 +28,8 @@ apt-get update
 
 # Programs
 apt-get install -y firefox
-apt-get install -y nautilus
+# apt-get install -y nautilus
 # apt-get install -y libreoffice # already instaled
-apt-get install -y gimp
 
 # Tools
 apt-get install -y p7zip-full
@@ -61,9 +60,6 @@ apt-get install -y clamtk # desktop application for clamav
 # apt-get install -y icewm-lite
 # apt-get install -y
 
-# Scientific and Programming
-apt-get install -y texlive-full # very big ~> to the end!
-apt-get install -y texlive-base # toDo: make installapt-get install on choice
 apt-get install -y latex2html
 apt-get -y install gnuplot # gnuplot
 apt-get -y install tiemu # texas instruments emulator
@@ -78,7 +74,7 @@ apt-get install -y vim-gnome
 apt-get install -y vim-latexsuite 
 apt-get install -y vim-addon-manager #aktivieren
 vim-addons install latex-suite # fuer jeden user
-vim-addons status # kontrolle
+# vim-addons status # kontrolle
 
 # apt-get install -y xtexcad extern
 # apt-get -y install xemacs
@@ -120,7 +116,7 @@ apt-get update; apt-get -y upgrade; apt-get update
 echo "installing hardware..."
 # HARDWARE
 # grafik: Gforce gt 740
-apt-get install -y nvidia-current
+# apt-get install -y nvidia-current
 # Restart after installation !!!
 
 # program for search and installation
@@ -129,7 +125,7 @@ apt-get install -y aptitude
 # boot manager
 apt-get install -y grub-customizer
 
-apt-get install -y usb-modeswitch # for mobile internet
+# apt-get install -y usb-modeswitch # for mobile internet
 # more info tomobile Internet: http://ubuntuforums.org/showpost.php?p=7219684&postcount=41
 
 # scanner
@@ -144,7 +140,7 @@ apt-get install -y brasero
 # booting
 apt-get install -y gparted
 
-echo "everythings good, but restart!"
+# echo "everythings good, but restart!"
 #  command: reboot
 
 # Other
@@ -156,7 +152,7 @@ apt-get install -y libcss
 # dazu
 apt-get -y install compizconfig-settings-manager # viele Konfigurationsmoeglichkeiten
 apt-get -y install synaptic # bessere Packetverwaltung als Ubuntu Software Center
-apt-get install brasero
+apt-get -y install brasero
 apt-get -y install unity-tweak-tool # mehr konfigurieren
 apt-get -y install gparted # partition tool
 
@@ -190,11 +186,11 @@ apt-get install -y dvbcut # cutting mpegs
 
 
 # programming
-apt-get install -y java-sdk
-apt-get install -y eclipse
+# apt-get install -y java-sdk newer version
+# apt-get install -y eclipse # old version, newer to download
 apt-get install -y vim-latexsuite
 apt-get install -y latex2html
-
+apt-get install -y texlive-base # toDo: make installapt-get install on choice
 
 
 
@@ -202,6 +198,8 @@ apt-get install -y latex2html
 # -d 
 # download only, doesn't install
 
+# call bigPackages.sh to ask a question
+./bigPackages.sh
 
 
 
@@ -227,4 +225,6 @@ ll
 # apt-get install -y ...
 # -y =Yes Option, Noninteractive say Yes to every question
 
+
+echo "everything's good, but please restart your machine"
 

@@ -1,21 +1,3 @@
-#!/bin/bash
-
-sudo su
-
-# REPOSITORIES (PREPARATION)
-add-apt-repository ppa:rvm/smplayer 
-add-apt-repository ppa:ubuntu-wine/ppa
-
-# UNIVERSE (MORE SOFTWARE)
-add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) main universe restricted multiverse"
-# deb http://ftp.de.debian.org/debian/ wheezy main contrib non-free
-# deb http://security.debian.org/ wheezy/updates main contrib
-# deb http://ftp.de.debian.org/debian/ wheezy-updates main contrib non-free
-# deb http://ftp.de.debian.org/debian/ wheezy-backports main contrib non-free
-
-# you can erase the "non-free" if you want; after add of repositories perform apt-get update!
-apt-get update
-
 # SOFTWARE
 
 
@@ -190,41 +172,6 @@ apt-get install -y dvbcut # cutting mpegs
 # apt-get install -y eclipse # old version, newer to download
 apt-get install -y vim-latexsuite
 apt-get install -y latex2html
-apt-get install -y texlive-base # toDo: make installapt-get install on choice
+apt-get install -y texlive-base # installed by default
 
-
-
-
-# -d 
-# download only, doesn't install
-
-# call bigPackages.sh to ask a question
-./bigPackages.sh
-
-
-
-
-cd ~/Downloads
-
-cd ~
-wget https://sourceforge.net/projects/vim-latex/files/releases/vim-latex-1.10.0.tar.gz
-tar xvfz vim-latex-1.10.0.tar.gz
-mv vim-latex-1.10.0 .vim
-
-cd ~
-git clone https://github.com/christian2222/dotfiles
-git clone https://github.com/christian2222/bash
-
-cd ~/dotfiles
-./makeLinks.sh
-
-cd ~
-ll
-
-
-# apt-get install -y ...
-# -y =Yes Option, Noninteractive say Yes to every question
-
-
-echo "everything's good, but please restart your machine"
 

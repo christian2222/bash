@@ -1,23 +1,24 @@
 # ask for installtion of big software packages
 PS3='Do you want to install Gimp and TexLive full?'
-options=("y" "n")
+options=("yes" "no")
 
-select opt in "${options[@]}"
+select opt in ${options[@]}
 do
 	case $opt in
-		y )
+		"yes" )
 			apt-get install -y texlive-full
 			apt-get install -y gimp
 			echo "TexLive full and Gimp are installed"
 			break
 			;;
-		n )
+		"no" )
 			echo "ok, TexLive base was installed as default"
 			break
 			;;
-#		*)
-#			echo "sorry, can't understand: $REPLY"
-#			;;
+		*)
+			echo "sorry, can't understand: $REPLY"
+			echo "Please choose number 1 or 2"
+			;;
 	esac
 done
 

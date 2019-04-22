@@ -1,6 +1,6 @@
 # SOFTWARE
-
-
+apt-get install -y aptitude
+aptitude update
 # Games
 # apt-get install -y supertux
 # apt-get install -y supertuxkart

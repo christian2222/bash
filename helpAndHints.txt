@@ -1,5 +1,3 @@
-# Install Checked
-
 # create a desktop link (unity, gnome)
 1. Open Terminal
 2. apt-get install gnome-panel (if not done yet)
@@ -9,22 +7,11 @@
 ls *.log | wc -l # Anzahl Dateien mit Endung .log
 Schnell Shutdown und Start in Windows deaktivieren, damit Linux auf C:\ Festplatte zugreifen kann (insb. hibernate und schneller Shutdown)
 
-# construct a softlink to eclipse with name Eclipse
-ln -s /media/xy/D04621FE4621E5C6/important/programmingMobile/javaMobile/eclipseLinux/eclipse Eclipse
-
-
 
 keine sudo operationen parallel zu vlc -> Absturz
 
 
 Magic läuft unter Gnome Classic und unity; andere WM nicht so gut
-
-Drucker läuft unter Linux nicht, aber unter windows
-
-
-
-
-oder
 
 
 

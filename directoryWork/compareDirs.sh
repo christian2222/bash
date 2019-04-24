@@ -1,7 +1,7 @@
 # create softlinks to equal files
 rekuOne() {
-	if [ $# -lt 1 ]; then
-		echo "usage: $0 dir1"
+	if [ $# -lt 2 ]; then
+		echo "usage: $0 orgDir dirToLink"
 		exit 1;
 	fi
 	for fileOne in $1/*
@@ -16,7 +16,7 @@ rekuOne() {
 		if [ -f $fileOne ]; then
 			#echo "   2. Rekursion mit $fileOne auf Verzeichnis $1"
 			#echo $(dirname $1)
-			rekuTwo "."
+			rekuTwo $2
 		fi
 		deepOne=""
 		for((i=0; i < $laufOne; i++))

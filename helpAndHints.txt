@@ -121,9 +121,6 @@ battle vs chess
 
 sudo service gdm restart # restart graphical desktop
 
-windows 10 key 6P99N-YF42M-TPGBG-9VMJP-YKHCF.
-
-
 ln -s [tarProg]  # creates a symbolic link to [tarProg] in current directory
 
 

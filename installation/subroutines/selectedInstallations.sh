@@ -9,7 +9,7 @@ aptitude update
 # apt-get install -y gnuchess
 
 # Programs
-apt-get install -y firefox
+# apt-get install -y firefox
 # apt-get install -y nautilus
 # apt-get install -y libreoffice # already instaled
 
@@ -88,7 +88,7 @@ echo "adding repositories..."
 # cinerella
 git clone git://git.cinelerra.org/j6t/cinelerra.git my_cinelerra
 # grub customizer
-add-apt-repository ppa:danielrichter2007/grub-customizer
+# add-apt-repository ppa:danielrichter2007/grub-customizer
 # nvidia-current
 add-apt-repository ppa:ubuntu-x-swat/x-updates
 
@@ -105,7 +105,7 @@ echo "installing hardware..."
 apt-get install -y aptitude
 
 # boot manager
-apt-get install -y grub-customizer
+# apt-get install -y grub-customizer
 
 # apt-get install -y usb-modeswitch # for mobile internet
 # more info tomobile Internet: http://ubuntuforums.org/showpost.php?p=7219684&postcount=41

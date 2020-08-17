@@ -15,8 +15,6 @@ add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) main
 # you can erase the "non-free" if you want; after add of repositories perform apt-get update!
 apt-get update
 
-# call first subroutine
-./subroutines/selectedInstallations.sh
 
 
 # -d 
@@ -24,6 +22,9 @@ apt-get update
 
 # call bigPackages.sh to ask a question
 ./subroutines/bigPackages.sh
+
+# call first subroutine
+./subroutines/selectedInstallations.sh
 
 # install vim in .vim directory
 ./subroutines/vimInstallation.sh

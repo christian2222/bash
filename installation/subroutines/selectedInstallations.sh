@@ -31,6 +31,22 @@ apt-get install -y kdiff3 # compares and merges 2 or 3 files or
 # apt-get install -y usb-modeswitch  # for mobbile Internet
 apt-get install -y clamav # clamav
 apt-get install -y clamtk # desktop application for clamav
+apt-get install -y latex2html
+apt-get -y install gnuplot # gnuplot
+apt-get -y install tiemu # texas instruments emulator
+# apt-get install -y java-sdk # not newest version
+apt-get -y install openjdk-11-jdk # java 11 jdk
+# apt-get install -y eclipse # not newest version?; is on hdd 1.0 tb inside the [important] folder
+apt-get install -y vim
+# apt-get install -y gvim # resolved by -gtk and -gnome
+apt-get install -y vim-gtk
+apt-get install -y vim-gnome
+
+# apt-get install -y xtexcad extern
+# apt-get -y install xemacs
+# apt-get -y install auctex
+apt-get install tmux # mouse free terminal development
+apt-get install pv # prints progrss bars for actions
 
 # Desktop Manager
 # apt-get install -y lxde
@@ -42,33 +58,12 @@ apt-get install -y clamtk # desktop application for clamav
 # apt-get install -y icewm-lite
 # apt-get install -y
 
-apt-get install -y latex2html
-apt-get -y install gnuplot # gnuplot
-apt-get -y install tiemu # texas instruments emulator
-# apt-get install -y java-sdk # not newest version
-apt-get -y install openjdk-11-jdk # java 11 jdk
-# apt-get install -y eclipse # not newest version?; is on hdd 1.0 tb inside the [important] folder
-apt-get install -y vim
-# apt-get install -y gvim # resolved by -gtk and -gnome
-apt-get install -y vim-gtk
-apt-get install -y vim-gnome
-# install vim latexsuite with the next 4 lines (order is important)
-apt-get install -y vim-latexsuite 
-apt-get install -y vim-addon-manager #aktivieren
-vim-addons install latex-suite # fuer jeden user
-# vim-addons status # kontrolle
-
-# apt-get install -y xtexcad extern
-# apt-get -y install xemacs
-# apt-get -y install auctex
-apt-get install tmux # mouse free terminal development
-apt-get install pv # prints progrss bars for actions
 # Video and Music
 # media codex and fonts for ubuntu
 apt-get install -y ubuntu-restricted-extras
 # configure
 ./usr/share/doc/libdvdread4/install-css.sh
-#players
+# players
 # apt-get install -y gnome-player
 # apt-get install -y gxine
 apt-get install -y vlc
@@ -95,7 +90,7 @@ add-apt-repository ppa:ubuntu-x-swat/x-updates
 # ensure you are up to date ;)
 apt-get update; apt-get -y upgrade; apt-get update
 
-echo "installing hardware..."
+# echo "installing hardware..."
 # HARDWARE
 # grafik: Gforce gt 740
 # apt-get install -y nvidia-current
@@ -174,5 +169,9 @@ apt-get install -y vim-latexsuite
 apt-get install -y latex2html
 apt-get install -y texlive-base # installed by default
 apt-get install -y texlive-latex-base # install latex base by default
-
+# install vim latexsuite with the next 4 lines (order is important)
+apt-get install -y vim-latexsuite 
+apt-get install -y vim-addon-manager #aktivieren
+vim-addons install latex-suite # fuer jeden user
+# vim-addons status # kontrolle
 

@@ -2,18 +2,21 @@
 
 
 # REPOSITORIES (PREPARATION)
-add-apt-repository ppa:rvm/smplayer 
-add-apt-repository ppa:ubuntu-wine/ppa
+sudo add-apt-repository -y ppa:rvm/smplayer
+# note: -y is yes to all queries
+sudo add-apt-repository -y ppa:ubuntu-wine/ppa
 
 # UNIVERSE (MORE SOFTWARE)
-add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) main universe restricted multiverse"
+sudo add-apt-repository  -y "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) main universe restricted multiverse"
 # deb http://ftp.de.debian.org/debian/ wheezy main contrib non-free
 # deb http://security.debian.org/ wheezy/updates main contrib
 # deb http://ftp.de.debian.org/debian/ wheezy-updates main contrib non-free
 # deb http://ftp.de.debian.org/debian/ wheezy-backports main contrib non-free
 
 # you can erase the "non-free" if you want; after add of repositories perform apt-get update!
-apt-get update
+#sudo apt-get update
+# update everything
+sudo ./update.sh
 
 
 
@@ -21,12 +24,13 @@ apt-get update
 # download only, doesn't install
 
 # call bigPackages.sh to ask a question
-./subroutines/bigPackages.sh
+sudo ./subroutines/bigPackages.sh
 
 # call first subroutine
-./subroutines/selectedInstallations.sh
+sudo ./subroutines/selectedInstallations.sh
 
-exit # switch to logged in user
+# call an update
+sudo ./update.sh
 
 # install vim in .vim directory
 ./subroutines/vimInstallation.sh

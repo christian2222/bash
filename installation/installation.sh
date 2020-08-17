@@ -26,6 +26,8 @@ apt-get update
 # call first subroutine
 ./subroutines/selectedInstallations.sh
 
+exit # switch to logged in user
+
 # install vim in .vim directory
 ./subroutines/vimInstallation.sh
 

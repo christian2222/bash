@@ -4,7 +4,8 @@
 # REPOSITORIES (PREPARATION)
 sudo add-apt-repository -y ppa:rvm/smplayer
 # note: -y is yes to all queries
-sudo add-apt-repository -y ppa:ubuntu-wine/ppa
+# not (yet) supported
+# sudo add-apt-repository -y ppa:ubuntu-wine/ppa
 
 # UNIVERSE (MORE SOFTWARE)
 sudo add-apt-repository  -y "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) main universe restricted multiverse"

@@ -13,8 +13,8 @@ pwd=$(pwd) # absoluten Pfad in eine Variable schreiben; ohne Leerzeichen
 # echo "$pwd" # Achtung pwd != $pwd -> guteInfo
 echo "Extrahieren von $pwd"
 # sleep 3
-for i in  *.* *; do
-# *.7z *.xz *.zip *.gz *.gzip *.tgz *.bz2 *.bzip2 *.tbz2 *.tb2 *.tbz *.tar *.wim *.swm *.lzma *.rar *.cab *.arj *.z *.taz *.cpio *.rpm *.deb *.lzh *.lha *.chm *.chw *.hxs *.iso *.msi *.doc *.xls *.ppt *.dmg *.xar *.hfs *.exe *.ntfs *.fat *.vhd *.mbr *.squahfs *.cramfs *.scap *.jar
+for i in  *.* *; do # siehe auskommentiertes for drunter
+# for i in *.7z *.xz *.zip *.gz *.gzip *.tgz *.bz2 *.bzip2 *.tbz2 *.tb2 *.tbz *.tar *.wim *.swm *.lzma *.rar *.cab *.arj *.z *.taz *.cpio *.rpm *.deb *.lzh *.lha *.chm *.chw *.hxs *.iso *.msi *.doc *.xls *.ppt *.dmg *.xar *.hfs *.exe *.ntfs *.fat *.vhd *.mbr *.squahfs *.cramfs *.scap *.jar ; do
 	echo extract "$i" "$xy" # nette Ausgabe; macht Programm aber langsam
 	# echo mv "$i" "/media/CnMemory Software/testdata/tmp/real/Done" sinnlos, nur relative pfade verwenden
 	# ändere mv zu cp, um alle gepackten Dateien in allen Ordnern zu sehen sind

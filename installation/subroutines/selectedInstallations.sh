@@ -1,6 +1,7 @@
 # SOFTWARE
 apt-get install -y aptitude
 aptitude update
+apt-get update; apt-get -y upgrade; apt-get update
 # Games
 # apt-get install -y supertux
 # apt-get install -y supertuxkart
@@ -85,7 +86,7 @@ git clone git://git.cinelerra.org/j6t/cinelerra.git my_cinelerra
 # grub customizer
 # add-apt-repository ppa:danielrichter2007/grub-customizer
 # nvidia-current
-add-apt-repository ppa:ubuntu-x-swat/x-updates
+add-apt-repository -y ppa:ubuntu-x-swat/x-updates
 
 # ensure you are up to date ;)
 apt-get update; apt-get -y upgrade; apt-get update

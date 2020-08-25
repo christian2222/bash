@@ -8,3 +8,16 @@ find . -name '*.pdf' # find ab der aktuellen directory alle pdf dateien rekursiv
 tree -s --sort=size | grep .pdf # -s display size of each pdf file; --sort=size sort by size
 
 find . -type f -name '*.pdf' -delete # WARNING: deletes all .pdf files in the current and all subdirectories
+
+find . -type d -name 'jdk-8u45-docs-all' -exec  echo {} \; -exec rm -fr {} + # WARNING: delete all 'jdk-8u45-docs-all' directories and all ! their subcontent
+
+find . -type d -name 'Lupo_PenSuite*' -exec  echo {} \; -exec rm -fr {} + #  # WARNING: delete all directories starting with 'Lupo_PenSuite' and all ! their subcontent
+
+find . -type d -name 'Lupo_PenSuite*' -exec rm -fr {} \; -exec echo {} + # WARNING: first delete then report but with errors...?
+
+find . -type d -name 'Lupo_PenSuite*' -exec rm -v -fr {} \; -exec echo {} + # WARNING: deletion and list removed files
+
+# idea: monitor removing big directory including all subdirectories with pv, but that is somehow difficult
+
+
+

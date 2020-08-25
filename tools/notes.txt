@@ -1,0 +1,2 @@
+use unTarAll.sh with tee command:
+./unTarAll.sh | tee unTar.log

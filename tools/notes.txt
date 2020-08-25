@@ -2,6 +2,9 @@ use unTarAll.sh with tee command:
 ./unTarAll.sh | tee unTar.log
 
 tree -s --sort=size # -s display size of each file; --sort=size sort by size
+
 find . -name '*.pdf' # find ab der aktuellen directory alle pdf dateien rekursiv abwärts
 
 tree -s --sort=size | grep .pdf # -s display size of each pdf file; --sort=size sort by size
+
+find . -type f -name '*.pdf' -delete # WARNING: deletes all .pdf files in the current and all subdirectories

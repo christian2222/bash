@@ -29,3 +29,9 @@ ls -d */ > directories.sh # list current directory entries to file directories.s
 tar -cf - importantsRest/ | pv > importantsRest.tar # monitor tar process; see https://www.howtogeek.com/428654/how-to-monitor-the-progress-of-linux-commands-with-pv-and-progress/
 
 find . -type f -name 'import*.tar' # find all import*.tar files in all subdirectories
+
+pv 1.tar | cmp 6.tar # compare two files and monitor comparsion
+
+
+
+

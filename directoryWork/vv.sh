@@ -4,7 +4,11 @@ checkParams() {
 		echo "usage: $0 dir1 dir2"
 		exit 1;
 	fi
-
+	if [[ "$1" == "$2" ]]; then
+		echo "WARNING; compare the same directory. $1 with $2."
+		echo "Script was made for diretories with different names!"
+		exit 1;
+	fi
 	if [ -d $1 -a -d $2 ]; then
 		#$listOne = 'ls $1`
 		#$listTwo = `ls $2`

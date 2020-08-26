@@ -32,6 +32,14 @@ find . -type f -name 'import*.tar' # find all import*.tar files in all subdirect
 
 pv 1.tar | cmp 6.tar # compare two files and monitor comparsion
 
+du -sh ./dir # display size of ./dir and of all subdiretories, in human readable form (-h) and only display the total sum (-s)
 
+du -h --max-depth=2 ./important13112015/important13112015/programmingMobile/javaMobile/jdk-8u45-docs-all/docs/ # summarize subdired size of all subdirectories of level 2
+
+tree -a # count number of all files and directories and display them in a tree
+
+find . -type f | wc -l # count all files in the current directory and its subdirectories; note: does not count subdirectories as entries
+
+find . -maxdepth 1 -type f | wc -l # count only the files in the current directory; note: maxdepth can vary
 
 

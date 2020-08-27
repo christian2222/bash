@@ -11,6 +11,7 @@ find . -type f -name '*.pdf' -delete # WARNING: deletes all .pdf files in the cu
 
 find . -type d -name 'jdk-8u45-docs-all' -exec  echo {} \; -exec rm -fr {} + # WARNING: delete all 'jdk-8u45-docs-all' directories and all ! their subcontent
 
+find . -type f -name '*DASH*' -delete
 find . -type d -name 'Lupo_PenSuite*' -exec  echo {} \; -exec rm -fr {} + #  # WARNING: delete all directories starting with 'Lupo_PenSuite' and all ! their subcontent
 
 find . -type d -name 'Lupo_PenSuite*' -exec rm -fr {} \; -exec echo {} + # WARNING: first delete then report but with errors...?
@@ -41,5 +42,7 @@ tree -a # count number of all files and directories and display them in a tree
 find . -type f | wc -l # count all files in the current directory and its subdirectories; note: does not count subdirectories as entries
 
 find . -maxdepth 1 -type f | wc -l # count only the files in the current directory; note: maxdepth can vary
+
+find . -type f -name '*DASH*' -delete # WARNING: deletes all files containing DASH below the current directory
 
 

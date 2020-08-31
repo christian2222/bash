@@ -45,4 +45,11 @@ find . -maxdepth 1 -type f | wc -l # count only the files in the current directo
 
 find . -type f -name '*DASH*' -delete # WARNING: deletes all files containing DASH below the current directory
 
+echo $HOME # output home directory
+echo $PATH # output path settings, can be extended with :
+
+# put aliases in .bash_aliases in the above directory
+
+find . -maxdepth 1 -type l -ls # list all softlinks and their destinations (in the current directory; see maxdepth)
+
 

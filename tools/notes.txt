@@ -49,7 +49,7 @@ echo $HOME # output home directory
 echo $PATH # output path settings, can be extended with :
 
 export PATH=$PATH:/place/with/the/file # extend PATH-Variable by /place/with/the/file; note: added path can be ~/someHomeDiretoryToo
-# note: same command without export at the beginning allows for tab completion
+PATH=$PATH:/place/with/the/file # does the  same and allows for tab completion
 
 # put aliases in .bash_aliases in the above directory
 

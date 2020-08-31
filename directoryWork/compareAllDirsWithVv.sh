@@ -4,6 +4,7 @@ do
 	do
 		echo vergleiche $dirOne mit $dirTwo
 		./vv.sh $dirOne $dirTwo
+		./delDoubles $dirTwo # speedUp
 	done
 done
 

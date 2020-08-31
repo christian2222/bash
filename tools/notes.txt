@@ -48,6 +48,9 @@ find . -type f -name '*DASH*' -delete # WARNING: deletes all files containing DA
 echo $HOME # output home directory
 echo $PATH # output path settings, can be extended with :
 
+export PATH=$PATH:/place/with/the/file # extend PATH-Variable by /place/with/the/file; note: added path can be ~/someHomeDiretoryToo
+# note: same command without export at the beginning allows for tab completion
+
 # put aliases in .bash_aliases in the above directory
 
 find . -maxdepth 1 -type l -ls # list all softlinks and their destinations (in the current directory; see maxdepth)

@@ -55,4 +55,5 @@ PATH=$PATH:/place/with/the/file # does the  same and allows for tab completion
 
 find . -maxdepth 1 -type l -ls # list all softlinks and their destinations (in the current directory; see maxdepth)
 
+lscpu # look under CPU op-mode(s) if your cpu support 64 bit
 

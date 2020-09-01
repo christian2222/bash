@@ -4,13 +4,14 @@ ripDvd() {
 		echo "usage: $0 dvdDir outputDir"
 		exit 1;
 	fi
-	forTen=( 0 1 2 3 4 5 6 7 8 9 )
-	for i in ${forTen[@]}
+	# forTen=( 0 1 2 3 4 5 6 7 8 9 )
+	# for i in ${forTen[@]}
+	for file in $1/*.VOB
 	do
-		ripName="$1/VTS_01_$i.VOB"
+		ripName="$file"
 		echo $ripName
 		if [ -f $ripName ]; then
-			ffmpeg -i $ripName -c copy "$2/output$i.ts"
+			ffmpeg -i $ripName -c copy "$outputDir"."/"."$file.ts"
 		fi
 	done
 }

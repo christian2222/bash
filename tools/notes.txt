@@ -57,3 +57,8 @@ find . -maxdepth 1 -type l -ls # list all softlinks and their destinations (in t
 
 lscpu # look under CPU op-mode(s) if your cpu support 64 bit
 
+find . -type d -empty # list all empty directories
+
+find . -type d -empty -delete # WARNING: delete all empty directories
+
+source addToPath.sh # to expand the current PATH-variable, otherwise sh file runs in subshell

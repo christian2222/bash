@@ -21,7 +21,7 @@ find . -type d -name 'Lupo_PenSuite*' -exec rm -v -fr {} \; -exec echo {} + # WA
 # idea: monitor removing big directory including all subdirectories with pv, but that is somehow difficult
 
 
-find . -type d \( -name 'jdk-*' -o -name 'eclipseLin*' \) # find jdk-* or (-o) eclipseLin* directories
+find . -type d \( -name 'jdk-*' -o -name 'eclipseLin*' \) # find jdk-* or (-o) eclipseLin* directories # realizes an or operation, note the \( and \)
 
 ls -d */ > directories.sh # list current directory entries to file directories.sh; now use vim and Ctrl+v mode to edit multiple lines at once, ie. insert './vv.sh important/' at the beginning of the line
 

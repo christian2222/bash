@@ -83,3 +83,5 @@ WARNING: overrides existing files
 find ./*.* -type f -ls |grep 2015 # find all files last modified 2015
 
 source ~/bash/directoryWork/addToPath.sh # change current path variable with source; otherwise bash would call it in a subshell and exit this shell after the script
+
+find -type f -name '*ubuntu*.*' -exec rm -i {} \; # ask before removing for every founded file

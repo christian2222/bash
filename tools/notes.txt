@@ -67,3 +67,19 @@ fdupes -rS ./ # find all duplicate files recursively with size; use option -d to
 
 ls -l | tee tmp.txt # lsit all files and copy standard output to file tmp.txt
 note: useful for long directory operations like fdupdes
+
+find . -type f -name '*.tar' -exec ls -l {} \; # list all tar files in all subdirectories
+
+tar -cfv dest.tar [file and folder list] # stores all files and folders in dest.tar
+
+tar xvf source.tar # extract the source.tar file
+
+find tmp/ -type f -name '*.tar' -exec tar xvf {} \; # extract all tar files inside tmp/ and its subdirs to the current directory.
+WARNING: overrides existing files
+
+find tmp/ -type f -name '*.tar' -exec tar xvf {} --one-top-level \; # extract all tar files inside tmp and its subdirs to the current directory with named folder
+WARNING: overrides existing files
+
+find ./*.* -type f -ls |grep 2015 # find all files last modified 2015
+
+source ~/bash/directoryWork/addToPath.sh # change current path variable with source; otherwise bash would call it in a subshell and exit this shell after the script

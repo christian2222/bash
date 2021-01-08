@@ -87,3 +87,5 @@ source ~/bash/directoryWork/addToPath.sh # change current path variable with sou
 find -type f -name '*ubuntu*.*' -exec rm -i {} \; # ask before removing for every founded file
 
 fdupes tmp/ tmp2/ # compare all files in both directories tmp/ and tmp2/
+
+zip -F broken.zip --out fixed.zip # repair broken.zip to fixed.zip WARNING: fixed.zip will be overridden

@@ -89,3 +89,7 @@ find -type f -name '*ubuntu*.*' -exec rm -i {} \; # ask before removing for ever
 fdupes tmp/ tmp2/ # compare all files in both directories tmp/ and tmp2/
 
 zip -F broken.zip --out fixed.zip # repair broken.zip to fixed.zip WARNING: fixed.zip will be overridden
+
+export PATH=$PATH:/tmp;  # add /tmp to the path-variable
+
+pv fileOne.tar | cmp -l fileTwo.tar # compare two files verbose with progress bar

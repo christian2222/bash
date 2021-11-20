@@ -97,3 +97,5 @@ pv fileOne.tar | cmp -l fileTwo.tar # compare two files verbose with progress ba
 fdupes -rSdN ./ | tee deleted.txt # deletes all but the first file in each set and logs deletion to deleted.txt
 find ./ -type d -empty | tee emptyDirs.txt # log all empty directories to emptyDirs.txt
 find ./ -type d -empty -delete # delete all empty directories
+
+man -k pipe # search all man pages for the keyword pipe

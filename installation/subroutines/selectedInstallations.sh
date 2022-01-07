@@ -42,7 +42,7 @@ apt-get install -y vim
 # apt-get install -y gvim # resolved by -gtk and -gnome
 apt-get install -y vim-gtk
 apt-get install -y vim-gnome
-
+apt-get install -y curl
 # apt-get install -y xtexcad extern
 # apt-get -y install xemacs
 # apt-get -y install auctex

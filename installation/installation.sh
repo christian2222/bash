@@ -34,7 +34,8 @@ sudo ./subroutines/selectedInstallations.sh
 sudo ./update.sh
 
 # install vim in .vim directory
-./subroutines/vimInstallation.sh
+# ./subroutines/vimInstallation.sh
+# idea: let user in ~/dotfiles/ do the configuration
 
 # clone important bash repository
 ./subroutines/cloneAndLink.sh

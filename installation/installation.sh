@@ -38,7 +38,8 @@ sudo ./update.sh
 # idea: let user in ~/dotfiles/ do the configuration
 
 # clone important bash repository
-./subroutines/cloneAndLink.sh
+# ./subroutines/cloneAndLink.sh
+# don't do this as superuser; wrong home directory!
 
 
 

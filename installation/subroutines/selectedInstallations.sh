@@ -46,8 +46,8 @@ apt-get install -y curl
 # apt-get install -y xtexcad extern
 # apt-get -y install xemacs
 # apt-get -y install auctex
-apt-get install tmux # mouse free terminal development
-apt-get install pv # prints progrss bars for actions
+apt-get install -y tmux # mouse free terminal development
+apt-get install -y pv # prints progrss bars for actions
 
 # Desktop Manager
 # apt-get install -y lxde
@@ -173,6 +173,6 @@ apt-get install -y texlive-latex-base # install latex base by default
 # install vim latexsuite with the next 4 lines (order is important)
 apt-get install -y vim-latexsuite 
 apt-get install -y vim-addon-manager #aktivieren
-vim-addons install latex-suite # fuer jeden user
+# vim-addons install latex-suite # fuer jeden user
 # vim-addons status # kontrolle
 

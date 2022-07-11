@@ -1,8 +1,9 @@
+#!/bin/bash
 # ask for installtion of big software packages
 PS3='Do you want to install Gimp and TexLive full?'
-options=("yes" "no")
+myOptions=("yes" " no")
 
-select opt in ${options[@]}
+select opt in ${myOptions[@]}
 do
 	case $opt in
 		"yes" )

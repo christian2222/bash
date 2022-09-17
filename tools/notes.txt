@@ -99,3 +99,5 @@ find ./ -type d -empty | tee emptyDirs.txt # log all empty directories to emptyD
 find ./ -type d -empty -delete # delete all empty directories
 
 man -k pipe # search all man pages for the keyword pipe
+
+pv old.tar > new.tar # copy old.tar to new.tar with progress bar

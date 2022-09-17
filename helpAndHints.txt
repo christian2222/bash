@@ -4,7 +4,8 @@
 3. gnome-desktop-item-edit /home/<user>/Desktop/ --create-new
 4. search executable files (commands) in /usr/bin
 
-ls *.log | wc -l # Anzahl Dateien mit Endung .log
+ls *.log | wc -l # number of files ending with .log
+
 Schnell Shutdown und Start in Windows deaktivieren, damit Linux auf C:\ Festplatte zugreifen kann (insb. hibernate und schneller Shutdown)
 
 
@@ -86,8 +87,8 @@ lsblk # lists all sdX gevieechs
 
 
 
-# construct a softlink to eclipse with name Eclipse
-ln -s /media/xy/D04621FE4621E5C6/important/programmingMobile/javaMobile/eclipseLinux/eclipse Eclipse
+# construct a symbolic link to <program>
+ln -s program.source link.name
 
 
 

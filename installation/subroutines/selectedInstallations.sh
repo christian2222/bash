@@ -36,7 +36,7 @@ apt-get install -y latex2html
 apt-get -y install gnuplot # gnuplot
 apt-get -y install tiemu # texas instruments emulator
 # apt-get install -y java-sdk # not newest version
-apt-get -y install openjdk-11-jdk # java 11 jdk
+apt-get -y install openjdk-17-jdk # java jdk
 # apt-get install -y eclipse # not newest version?; is on hdd 1.0 tb inside the [important] folder
 apt-get install -y vim
 # apt-get install -y gvim # resolved by -gtk and -gnome
@@ -48,6 +48,7 @@ apt-get install -y curl
 # apt-get -y install auctex
 apt-get install -y tmux # mouse free terminal development
 apt-get install -y pv # prints progrss bars for actions
+apt-get install -y git # prints progrss bars for actions
 
 # Desktop Manager
 # apt-get install -y lxde

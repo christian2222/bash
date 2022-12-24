@@ -175,4 +175,4 @@ apt-get install -y vim-latexsuite
 apt-get install -y vim-addon-manager #aktivieren
 # vim-addons install latex-suite # fuer jeden user
 # vim-addons status # kontrolle
-
+apt-get install -y pdfarranger

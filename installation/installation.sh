@@ -30,6 +30,9 @@ call ./subroutines/bigPackages.sh
 # call first subroutine
 call ./subroutines/selectedInstallations.sh
 
+# call installation of vim
+call ./subroutines/installVimPlugAsSudo.sh
+
 # call an update
 call ./update.sh
 

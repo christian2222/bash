@@ -1,5 +1,5 @@
 #!/bin/bash
-
+preDate=$(date)
 
 # REPOSITORIES (PREPARATION)
 add-apt-repository -y ppa:rvm/smplayer
@@ -52,4 +52,6 @@ source ./update.sh
 
 
 echo "everything's good, but please restart your machine"
-
+postDate=$(date)
+echo $preDate
+echo $postDate

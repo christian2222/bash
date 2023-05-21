@@ -1,148 +1,127 @@
 # create a desktop link (unity, gnome)
+**************************************
 1. Open Terminal
 2. apt-get install gnome-panel (if not done yet)
 3. gnome-desktop-item-edit /home/<user>/Desktop/ --create-new
 4. search executable files (commands) in /usr/bin
-
-ls *.log | wc -l # number of files ending with .log
-
-Schnell Shutdown und Start in Windows deaktivieren, damit Linux auf C:\ Festplatte zugreifen kann (insb. hibernate und schneller Shutdown)
-
-
-keine sudo operationen parallel zu vlc -> Absturz
-
-
-Magic läuft unter Gnome Classic und unity; andere WM nicht so gut
-
-
-
+# easier way use ln -rs !
 # create new launcher
 gnome-desktop-item-edit --create-new ~/Desktop
 
-battle vs chess 
 
+System crashes
+**************
+keine sudo operationen parallel zu vlc -> Absturz
 sudo service gdm restart # restart graphical desktop
 
-
-ln -s [tarProg]  # creates a symbolic link to [tarProg] in current directory
-
-
-df # zeigt freien Spiecherplatz der Festplatte an; -h fuer human readable
-
-gnome-session-properties  # StartUpPrograms
-
-du <verzeichnis> # liefert gesamte groesse des verzeichnis
+Games
+*****
+Magic läuft unter Gnome Classic und unity; andere WM nicht so gut
+battle vs chess 
 
 
-monster.de
+
+other
+*****
+gnome-session-properties  # edit StartUpPrograms
+sudo usermod  -d new_home_dir  -m  username # change your homeDirectory with subfolders to new_home_dir
+
+
+Links
+*****
+https://www.monster.de
 https://jobboerse.arbeitsagentur.de
 http://de.indeed.com
 http://www.stepstone.de
+# http://ubuntuforums.org/showpost.php?p=7219684&postcount=41
+https://www.hirensbootcd.org/
 
 
-
-# commands
+# bash commands
+***************
 dd if=/dev/cdrom of=filename.iso # copy a cd/dvd to iso
-
 diff -sr datei.1 datei.2   # vergleicht 2 dateinen und meldet # identische Dateien zurück (-s sort für diese Ausgabe; siehe man)
 # (-r rekursiv bei Verzeichnissen)
+df # zeigt freien Spiecherplatz der Festplatte an; -h fuer human readable
+du -h <verzeichnis> # liefert gesamte groesse des verzeichnis, -h for human readable
+ls *.log | wc -l # number of files ending with .log
+lsblk # lists all sdX gevieechs (block devices)
 
+ln -s [tarProg]  # creates a symbolic link to [tarProg] in current directory
+# construct a symbolic link to <program>
+ln -s program.source link.name
+# construct a symbolc relative link to destination (a file or folder)
+ln -sr destination link.name
 
-
-Hiren's BootCD 15.2
-
-
+# /usr/local/bin  # setze ausfuehrbare Dateien hierhin, um die von ueberall aus aufzurufen - funtzt nicht
+ls &> file.txt # print stdout and stderr in die Datei file.txt
+cat text.txt | uniq # löscht "doppelte oder mehrfache Zeilen"
+du -h <filename> | cut -f1 # size of the file filename
+df -h	# used space on directories 
+stat --printf="%s\n" file.any # best way to determine file size; \n for new line
+fdupes -r
 
 # howto guest addition
+**********************
 $sharename= <<WindowsName of Folder>>
 mount -t vboxsf $sharename /mnt/$sharename
 
 now files are shared in /mnt/$sharename
 
-
-# /usr/local/bin  # setze ausfuehrbare Dateien hierhin, um die von ueberall aus aufzurufen - funtzt nicht
-
-# smplayer first activate [Ctrl P] for Preferences, Playlist -> Add files in directories recursively
-
-handbrake zur DVD konvertierung
-
-
-k4dirstat - windirstat (in Windows)
-
-
-gsettings reset-recursively org.compiz # compiz manager auf Anfang stellen
-
-
-
-all settings -> "Helligkeit und Sperren"
-
-all settings -> keyboard -> eigene Tastenkuerzel
-gnome-system-monitor # als Befehl einfuegen
-
-lsblk # lists all sdX gevieechs
-
-# smplayer Einstellungen -> Playlist -> search directories recursively
-
-# bei Installation von Linux, alles auf eine Partition, sonst gibt es Bootproblemme wegen UEFI!
-
-
-
-# construct a symbolic link to <program>
-ln -s program.source link.name
-
-
-
-
+# installable programs
+**********************
+(sudo apt-get install <porgramname>)
+[
+	aptitude search 
+	gets too big, use grep as pipe
+	aptitude search | grep -E "<pattern>"
+	so you also can search inside the descriptions of the programs
+]
+handbrake # zur DVD konvertierung
+k4dirstat (- windirstat in Windows)
 apt-get -y install compizconfig-settings-manager # viele Konfigurationsmoeglichkeiten
 synaptic # bessere Packetverwaltung als Ubuntu Software Center
-
-
-gsettings reset-recursively org.compiz # compiz manager auf Anfang stellen
-
 unity-tweak-tool # mehr konfigurieren
-
-all settings -> "Helligkeit und Sperren"
-
-all settings -> keyboard -> eigene Tastenkuerzel
-gnome-system-monitor # als Befehl einfuegen
-
-lsblk # lists all sdX gevieechs
-
-# smplayer Einstellungen -> Playlist -> search directories recursively
-
-# bei Installation von Linux, alles auf eine Partition, sonst gibt es Bootproblemme wegen UEFI!
-
-
 minicopier # like copy handler inclusive source code; doch nicht so toll...
-
-
-meld or kdiff3 # compare contentsof directories
-
-
-
-
+meld or kdiff3 # compare contents of directories
 fslint # duplicate finder
-
 fdupes # duplicate finder command line tool
-
 dvdrip # makes isos - sinnlos
-
-
-brasero image write problems:
-
-
+xfburn # simple burner
+sane xsane # scan documents
+dvdrip # makes isos - sinnlos
 Install the ubuntu-restricted-extras package and then install the libcss:
-
 sudo apt-get install ubuntu-restricted-extras
 sudo /usr/share/doc/libdvdread4/install-css.sh
 
-xfburn
+# configuration
+***************
+gsettings reset-recursively org.compiz # compiz manager auf Anfang stellen
+all settings -> "Helligkeit und Sperren"
+all settings -> keyboard -> eigene Tastenkuerzel
+gnome-system-monitor # als Befehl einfuegen
+# smplayer Einstellungen -> Playlist -> search directories recursively
+gsettings reset-recursively org.compiz # compiz manager auf Anfang stellen
+all settings -> "Helligkeit und Sperren"
+all settings -> keyboard -> eigene Tastenkuerzel
+gnome-system-monitor # als Befehl einfuegen
+# smplayer first activate [Ctrl P] for Preferences, Playlist -> Add files in directories recursively
+All Settings->Appearance->check Enable workspaces
+Alt+Super+S " turn screen on or off
+# smplayer Einstellungen -> Playlist -> search directories recursively
+
+
+# booting configuration
+***********************
+# bei Installation von Linux, alles auf eine Partition, sonst gibt es Bootproblemme wegen UEFI!
+Schnell Shutdown und Start in Windows deaktivieren, damit Linux auf C:\ Festplatte zugreifen kann (insb. hibernate und schneller Shutdown)
+# bei Installation von Linux, alles auf eine Partition, sonst gibt es Bootproblemme wegen UEFI!
 
 
 
-install sane xsane
 
-
+repositories
+************
 grub customizer
 deb http://ppa.launchpad.net/danielrichter2007/grub-customizer/ubuntu YOUR_UBUNTU_VERSION_HERE main 
 deb-src http://ppa.launchpad.net/danielrichter2007/grub-customizer/ubuntu YOUR_UBUNTU_VERSION_HERE main 
@@ -150,55 +129,14 @@ grub customizer
 sudo add-apt-repository ppa:danielrichter2007/grub-customizer
 sudo apt-get update
 sudo apt-get install grub-customizer
-
-
-grafik: Gforce gt 740
-sudo install nvidia-current
-
-
-
-# GrafikkartenTreiber aktualisieren !!!
-
-# vim
-:help keycodes
-
-fdupes -r
-
-aptitude search 
-gets too big, use grep as pipe
-
-aptitude search | grep -E "<pattern>"
-so you also can search inside the descriptions of the programs
-
-
-programs to install
-
-
 Cinerella
 git clone git://git.cinelerra.org/j6t/cinelerra.git my_cinelerra
 
 
+grafik: Gforce gt 740
+sudo install nvidia-current
+# GrafikkartenTreiber aktualisieren !!!
 
-ls &> file.txt # print stdout and stderr in die Datei file.txt
-
-cat text.txt | uniq # löscht "doppelte oder mehrfache Zeilen"
-
-du -h <filename> | cut -f1 # size of the file filename
-
-df -h	# used space on directories 
-
-stat --printf="%s\n" file.any # best way to determine file size; \n for new line
-
-
-sudo usermod  -d new_home_dir  -m  username # change your homeDirectory with subfolders to new_home_dir
-
-All Settings->Appearance->check Enable workspaces
-
-Alt+Super+S " turn screen on or off
-
-
-# apt-get -y install dvdrip # makes isos - sinnlos
-
-
-
-# http://ubuntuforums.org/showpost.php?p=7219684&postcount=41
+# vim
+*****
+:help keycodes

@@ -2,6 +2,7 @@
 apt-get install -y aptitude
 aptitude update
 apt-get update; apt-get -y upgrade; apt-get update
+
 # Games
 # apt-get install -y supertux
 # apt-get install -y supertuxkart
@@ -15,8 +16,8 @@ apt-get update; apt-get -y upgrade; apt-get update
 # apt-get install -y libreoffice # already instaled
 
 # Tools
-apt-get install -y p7zip-full
 apt-get install -y p7zip
+apt-get install -y p7zip-full
 apt-get install -y tree
 # apt-get install -y ultracopier
 apt-get install -y pstools
@@ -32,23 +33,31 @@ apt-get install -y kdiff3 # compares and merges 2 or 3 files or
 # apt-get install -y usb-modeswitch  # for mobbile Internet
 apt-get install -y clamav # clamav
 apt-get install -y clamtk # desktop application for clamav
-apt-get install -y latex2html
-apt-get -y install gnuplot # gnuplot
-apt-get -y install tiemu # texas instruments emulator
+apt-get install -y gnuplot # gnuplot
+apt-get install -y tiemu # texas instruments emulator
 # apt-get install -y java-sdk # not newest version
-apt-get -y install openjdk-17-jdk # java jdk
-# apt-get install -y eclipse # not newest version?; is on hdd 1.0 tb inside the [important] folder
+apt-get install -y openjdk-17-jdk # java jdk
+# apt-get install -y eclipse # not newest version?;
 apt-get install -y vim
 # apt-get install -y gvim # resolved by -gtk and -gnome
 apt-get install -y vim-gtk
 apt-get install -y vim-gnome
 apt-get install -y curl
+#latex part
+apt-get install -y latex2html
+apt-get install -y texlive-base # installed by default
+apt-get install -y texlive-latex-base # install latex base by default
+# install vim latexsuite with the next 4 lines (order is important)
+apt-get install -y vim-latexsuite 
+apt-get install -y vim-addon-manager #aktivieren
 # apt-get install -y xtexcad extern
 # apt-get -y install xemacs
 # apt-get -y install auctex
+apt-get install -y pdfarranger # rearrange pdfs
+apt-get install -y neofetch # nice terminal info
 apt-get install -y tmux # mouse free terminal development
 apt-get install -y pv # prints progrss bars for actions
-apt-get install -y git # prints progrss bars for actions
+apt-get install -y git # should already be there, but for sure
 
 # Desktop Manager
 # apt-get install -y lxde
@@ -66,13 +75,6 @@ apt-get install -y ubuntu-restricted-extras
 # configure
 ./usr/share/doc/libdvdread4/install-css.sh
 # players
-# apt-get install -y gnome-player
-# apt-get install -y gxine
-apt-get install -y vlc
-apt-get install -y smplayer # see re[psitories
-# apt-get install -y kaffeine # only DesktopPC
-# apt-get install -y gnome-mplayer
-apt-get install -y dvbcut # cutting mpegs
 
 # software/properties-gtk -> check all checkboxes
 # hardware
@@ -82,8 +84,6 @@ apt-get install -y dvbcut # cutting mpegs
 echo "adding repositories..."
 
 # Add repositories
-# cinerella
-git clone git://git.cinelerra.org/j6t/cinelerra.git my_cinelerra
 # grub customizer
 # add-apt-repository ppa:danielrichter2007/grub-customizer
 # nvidia-current
@@ -116,7 +116,7 @@ apt-get install -y xsane
 apt-get install -y xfburn
 apt-get install -y brasero
 
-# booting
+# partitioning
 apt-get install -y gparted
 
 # echo "everythings good, but restart!"
@@ -129,21 +129,24 @@ apt-get install -y gnome-panel #?
 apt-get install -y libcss
 
 # dazu
-apt-get -y install compizconfig-settings-manager # viele Konfigurationsmoeglichkeiten
-apt-get -y install synaptic # bessere Packetverwaltung als Ubuntu Software Center
-apt-get -y install brasero
-apt-get -y install unity-tweak-tool # mehr konfigurieren
-apt-get -y install gparted # partition tool
+apt-get install -y compizconfig-settings-manager # viele Konfigurationsmoeglichkeiten
+apt-get install -y synaptic # bessere Packetverwaltung als Ubuntu Software Center
+apt-get install -y unity-tweak-tool # mehr konfigurieren
 
 # some video tools
-apt-get -y install ffmpeg # commandline converter
-apt-get -y install devede # create dvds from mp4s and other files
-apt-get -y install winff # desktop converter tool
-apt-get -y install ripperx # ripping mp3s from audio cds
+apt-get install -y ffmpeg # commandline converter
+apt-get install -y devede # create dvds from mp4s and other files
+apt-get install -y winff # desktop converter tool
+apt-get install -y ripperx # ripping mp3s from audio cds
 apt-get install -y dvbcut # cutting mpegs
-# apt-get -y install 
-# apt-get -y install 
-# apt-get -y install 
+apt-get install -y kdenlive # video editor
+#players
+# apt-get install -y gnome-player
+# apt-get install -y gxine
+apt-get install -y vlc
+apt-get install -y smplayer # see re[psitories
+# apt-get install -y kaffeine # only DesktopPC
+# apt-get install -y gnome-mplayer
 
 #editors
 # apt-get install openshot
@@ -162,19 +165,8 @@ apt-get install -y dvbcut # cutting mpegs
 # after all call aptitude update to get access to the "new" software
 
 
-
-
 # programming
 # apt-get install -y java-sdk newer version
 # apt-get install -y eclipse # old version, newer to download
-apt-get install -y vim-latexsuite
-apt-get install -y latex2html
-apt-get install -y texlive-base # installed by default
-apt-get install -y texlive-latex-base # install latex base by default
-# install vim latexsuite with the next 4 lines (order is important)
-apt-get install -y vim-latexsuite 
-apt-get install -y vim-addon-manager #aktivieren
 # vim-addons install latex-suite # fuer jeden user
 # vim-addons status # kontrolle
-apt-get install -y pdfarranger
-apt-get install -y neofetch

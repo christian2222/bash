@@ -30,9 +30,6 @@ source ./subroutines/bigPackages.sh
 # call first subroutine
 source ./subroutines/selectedInstallations.sh
 
-# call installation of vim
-source ./subroutines/installVimPlugAsSudo.sh
-
 # call an update
 source ./update.sh
 
